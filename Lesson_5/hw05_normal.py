@@ -14,7 +14,37 @@
 # оформленные в виде соответствующих функций,
 # и импортированные в данный файл из easy.py
 # ИСПОЛЬЗОВАТЬ МОДУЛЬ OS и SHUTIL
+import os
+import easy
 
+print('Я могу: ')
+print('1. Перейти в папку')
+print('2. Просмотреть содержимое папки')
+print('3. Создать папку')
+print('4. Удалить папку')
+print('5. Закончить')
+answer = input('Продолжить? Y/N ')
+
+while answer == 'Y':
+    do = int(input('Укажите номер действия: '))
+    if do == 1:
+        name_dir = input('Укажите название папки: ')
+        try:
+            os.chdir(name_dir)
+            print('Перешел в папку', os.getcwd())
+        except FileNotFoundError:
+            print('Директория не найдена')
+    elif do == 2:
+        print(os.listdir())
+    elif do == 3:
+        name_dir2 = input('Введите название папки: ')
+        easy.create_dir(name_dir2)
+    elif do == 4:
+        name_dir2 = input('Введите название папки: ')
+        easy.remove_dir(name_dir2)
+    elif do == 5:
+        break
+print('До свидания!')
 
 
 
