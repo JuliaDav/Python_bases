@@ -44,7 +44,6 @@ class Position(Worker):
 
 worker_1 = Worker('Vasya', 'Petrov', '30000+20000')
 worker_2 = Worker('Petya', 'Ivanov', '40000+20000')
-
 position_1 = Position('Sergey', 'Borisov', '45000+20000', '10')
 position_2 = Position('Boris', 'Sergeev', '35000+20000', '15')
 
