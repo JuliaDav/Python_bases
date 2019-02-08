@@ -57,6 +57,7 @@ class Triangle:
         return len
 
 tgl1 = Triangle([2, 4, 6, 5, 3, 8])
+
 print(tgl1.coords)
 print('Периметр = ', tgl1.perim)
 print('Длины сторон = ', tgl1.vec1, tgl1.vec2, tgl1.vec3)
