@@ -27,7 +27,6 @@ class Wrapper:
     def __init__(self, object):
         self.wrapped = object
         print(self.wrapped)
-
     def __getattr__(self, attrname):
         return getattr(self.wrapped, attrname)
 
