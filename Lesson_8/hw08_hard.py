@@ -8,7 +8,6 @@ class InputError(Exception):
     def __init__(self, a):
         Exception.__init__(self)
         self.a = a
-
     def __str__(self):
         return 'InputException: Число отрицательно ({0}); ' \
                'нужно ввести положительное'.format(self.a)
